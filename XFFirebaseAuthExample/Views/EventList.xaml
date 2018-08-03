@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TouristEye.Views.EventList">
+    <ListView x:Name="MyListView"
+            ItemsSource="{Binding Items}"
+            ItemSelected="Handle_ItemTapped"
+            CachingStrategy="RecycleElement"
+            IsPullToRefreshEnabled="True"
+            IsRefreshing="{Binding refresh,Mode=TwoWay}"
+              RefreshCommand="{Binding LoadListCmd}">
+
+        <!--Built in Cells-->
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <TextCell Text="{Binding Name, Mode=TwoWay}" Detail="{Binding Address,Mode=TwoWay}" />
+        </DataTemplate>
+    </ListView.ItemTemplate>
+    
+    <!--Custom View Cells-->
+    <!--
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout>
+            <Label Text="{Binding Text}" 
+                   Style="{DynamicResource ListItemTextStyle}" />
+            <Label Text="{Binding Detail}" 
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    -->
+  </ListView>
+</ContentPage>

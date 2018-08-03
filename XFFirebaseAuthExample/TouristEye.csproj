@@ -1,0 +1,172 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Rest\Implementations\**" />
+    <Compile Remove="Rest\Interfaces\**" />
+    <Compile Remove="Validations\**" />
+    <EmbeddedResource Remove="Rest\Implementations\**" />
+    <EmbeddedResource Remove="Rest\Interfaces\**" />
+    <EmbeddedResource Remove="Validations\**" />
+    <None Remove="Rest\Implementations\**" />
+    <None Remove="Rest\Interfaces\**" />
+    <None Remove="Validations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Firebase.Xamarin" Version="0.3.6" />
+    <PackageReference Include="modernhttpclient" Version="2.4.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="PCLStorage" Version="1.0.2" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.1.4.158-pre" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="16.1.0.37" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+    <PackageReference Include="Xam.Plugin.Media" Version="4.0.0.9" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
+    <PackageReference Include="Autofac" Version="4.6.2" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="3.1.0.583944" />
+    <PackageReference Include="XLabs.Forms" Version="2.3.0-pre05" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Rest\" />
+    <Folder Include="Services\" />
+    <Folder Include="Converters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Behaviors\ValidationBehavior.cs" />
+    <Compile Remove="Home.xaml.cs" />
+    <Compile Remove="HomeMaster.xaml.cs" />
+    <Compile Remove="HomeMenuItem.cs" />
+    <Compile Remove="Models\Address.cs" />
+    <Compile Remove="Models\BusinessDetail.cs" />
+    <Compile Remove="Models\BusinessList.cs" />
+    <Compile Remove="Models\BusinessWorking.cs" />
+    <Compile Remove="Models\CacheData.cs" />
+    <Compile Remove="Models\DetectLocation.cs" />
+    <Compile Remove="Models\RadioButton.cs" />
+    <Compile Remove="Models\SearchCategory.cs" />
+    <Compile Remove="Models\Service.cs" />
+    <Compile Remove="Models\User.cs" />
+    <Compile Remove="Services\IFirebaseAuthenticator.cs" />
+    <Compile Remove="Services\NavigationService.cs" />
+    <Compile Remove="ViewModels\AddCourseDetailsPageViewModel.cs" />
+    <Compile Remove="ViewModels\AddCoursePageViewModel.cs" />
+    <Compile Remove="ViewModels\AddItemPriceListManualyPageViewModel.cs" />
+    <Compile Remove="ViewModels\AddItemPricePopupPageViewModel.cs" />
+    <Compile Remove="ViewModels\AddPriceListManualyPageViewModel.cs" />
+    <Compile Remove="ViewModels\AddPriceListPageViewModel.cs" />
+    <Compile Remove="ViewModels\BusinessDetails1PageViewModel.cs" />
+    <Compile Remove="ViewModels\BusinessDetails2PageViewModel.cs" />
+    <Compile Remove="ViewModels\BusinessDetails3PageViewModel.cs" />
+    <Compile Remove="ViewModels\BusinessDetails4PageViewModel.cs" />
+    <Compile Remove="ViewModels\ChangeLocationManuallyPageViewModel.cs" />
+    <Compile Remove="ViewModels\ChangeSearchCategoryPageViewMode.cs" />
+    <Compile Remove="ViewModels\DetectLocationPageViewModel.cs" />
+    <Compile Remove="ViewModels\FeedbackPageViewModel.cs" />
+    <Compile Remove="ViewModels\HomeViewModel.cs" />
+    <Compile Remove="ViewModels\LoginPageViewModel.cs" />
+    <Compile Remove="ViewModels\MapsViewpageViewModel.cs" />
+    <Compile Remove="ViewModels\SelectBusinessPageViewModel.cs" />
+    <Compile Remove="Views\AddCourseDetailPage.xaml.cs" />
+    <Compile Remove="Views\AddCoursePage.xaml.cs" />
+    <Compile Remove="Views\AddItemPriceList.xaml.cs" />
+    <Compile Remove="Views\AddItemPriceListManualyPage.xaml.cs" />
+    <Compile Remove="Views\AddItemPricePopupPage.xaml.cs" />
+    <Compile Remove="Views\AddPriceListManualyPage.xaml.cs" />
+    <Compile Remove="Views\AddPriceListPage.xaml.cs" />
+    <Compile Remove="Views\AddServicePricePage.xaml.cs" />
+    <Compile Remove="Views\BusinessDetails1Page.xaml.cs" />
+    <Compile Remove="Views\BusinessDetails2Page.xaml.cs" />
+    <Compile Remove="Views\BusinessDetails3Page.xaml.cs" />
+    <Compile Remove="Views\BusinessDetails4Page.xaml.cs" />
+    <Compile Remove="Views\BusinessLocationsPage.xaml.cs" />
+    <Compile Remove="Views\ChangeLocationManuallyPage.xaml.cs" />
+    <Compile Remove="Views\ChangeSearchCategoryPage.xaml.cs" />
+    <Compile Remove="Views\DetectLocationPage.xaml.cs" />
+    <Compile Remove="Views\FeedbackPage.xaml.cs" />
+    <Compile Remove="Views\HomePage.xaml.cs" />
+    <Compile Remove="Views\SelectBusinessPage.xaml.cs" />
+    <Compile Remove="Views\UploadPriceListImagePage.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Home.xaml" />
+    <EmbeddedResource Remove="HomeMaster.xaml" />
+    <EmbeddedResource Remove="Views\AddCourseDetailPage.xaml" />
+    <EmbeddedResource Remove="Views\AddCoursePage.xaml" />
+    <EmbeddedResource Remove="Views\AddItemPriceList.xaml" />
+    <EmbeddedResource Remove="Views\AddItemPriceListManualyPage.xaml" />
+    <EmbeddedResource Remove="Views\AddItemPricePopupPage.xaml" />
+    <EmbeddedResource Remove="Views\AddPriceListManualyPage.xaml" />
+    <EmbeddedResource Remove="Views\AddPriceListPage.xaml" />
+    <EmbeddedResource Remove="Views\AddServicePricePage.xaml" />
+    <EmbeddedResource Remove="Views\BusinessDetails1Page.xaml" />
+    <EmbeddedResource Remove="Views\BusinessDetails2Page.xaml" />
+    <EmbeddedResource Remove="Views\BusinessDetails3Page.xaml" />
+    <EmbeddedResource Remove="Views\BusinessDetails4Page.xaml" />
+    <EmbeddedResource Remove="Views\BusinessLocationsPage.xaml" />
+    <EmbeddedResource Remove="Views\ChangeLocationManuallyPage.xaml" />
+    <EmbeddedResource Remove="Views\ChangeSearchCategoryPage.xaml" />
+    <EmbeddedResource Remove="Views\DetectLocationPage.xaml" />
+    <EmbeddedResource Remove="Views\FeedbackPage.xaml" />
+    <EmbeddedResource Remove="Views\HomePage.xaml" />
+    <EmbeddedResource Remove="Views\SelectBusinessPage.xaml" />
+    <EmbeddedResource Remove="Views\UploadPriceListImagePage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\StoreList.xaml.cs">
+      <DependentUpon>StoreList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\EventList.xaml.cs">
+      <DependentUpon>EventList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\TourList.xaml.cs">
+      <DependentUpon>TourList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\TravelList.xaml.cs">
+      <DependentUpon>TravelList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\EntertainmentList.xaml.cs">
+      <DependentUpon>EntertainmentList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HomeMenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AccomodationList.xaml.cs">
+      <DependentUpon>AccomodationList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LocationMapPage.xaml.cs">
+      <DependentUpon>LocationMapPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Views\ForgotPasswordPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\HomeDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\HomeMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Loader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AccomodationList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MapsViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SignupPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

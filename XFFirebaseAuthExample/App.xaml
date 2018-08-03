@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TouristEye.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Blue_btn">#2196F3</Color>
+            <Color x:Key="Primary">#fec106</Color>
+            <Color x:Key="PrimaryDark">#1976D2</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
+            <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
+            <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
+            <Color x:Key="LightTextColor">#000000</Color>
+            <Color x:Key="redbtn">#e24323</Color>
+            <Color x:Key="blackbtn">#3B3B3B</Color>
+            <Color x:Key="bluebtn">#014A7F</Color>
+            <Color x:Key="appbackground">#C6F6FA</Color>
+            <Color x:Key ="greycolor">#EFF0F1</Color>
+
+
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource bluebtn}" />
+                <Setter Property="BackgroundImage" Value="header.jpg"></Setter>
+                <Setter Property="BarTextColor" Value= "White" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TouristEye.Views.HomeMaster"
+             Title="Master">
+  <StackLayout>
+        <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}">
+            <ListView.Header>
+                <Grid BackgroundColor="{StaticResource bluebtn}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+            <Label
+              Grid.Column="1"
+              Grid.Row="0"
+              TextColor="Orange"
+              FontSize="26"
+              Text="Tourist Eye"
+              Style="{DynamicResource SubtitleStyle}"/>
+            <Label
+              x:Name="Name"
+              Grid.Column="1"
+              Grid.Row="1"
+              TextColor="White"
+              Style="{DynamicResource SubtitleStyle}"/>
+            <Label
+                x:Name="Email"
+              Grid.Column="1"
+              Grid.Row="2"
+              TextColor="White"
+              Style="{DynamicResource SubtitleStyle}"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Image Margin="10" Source="{Binding Icon}" VerticalOptions="Center" HorizontalOptions="Start"/>
+                            <Label Margin="10" 
+                       VerticalOptions="Center"
+                       HorizontalOptions="StartAndExpand"
+                       TextColor="#777777"
+                       VerticalTextAlignment="Center" 
+                       Text="{Binding Title}" 
+                       FontSize="15"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+                <StackLayout x:Name="logout_btn" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Image Margin="10" Source="logout.png" VerticalOptions="Center" HorizontalOptions="Start"/>
+                    <Label Margin="10" 
+                VerticalOptions="Center"
+                HorizontalOptions="StartAndExpand"
+                TextColor="#777777"
+                VerticalTextAlignment="Center" 
+                Text="Logout" 
+                FontSize="15"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="logout_Tapped"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </ListView.Footer>
+        </ListView>
+    </StackLayout>
+</ContentPage>

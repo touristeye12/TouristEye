@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TouristEye.Views.LoginPage">
+    <AbsoluteLayout>
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="header.jpg" Margin="0,0,0,10" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
+            <Grid Grid.Row="1" Padding="20" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Entry Grid.Row="0" x:Name="EmailEntry" Placeholder="Email" Text="{Binding Email,Mode=TwoWay}" Keyboard="Email" BackgroundColor="White" PlaceholderColor="Black"  WidthRequest="330" HorizontalOptions="Center">
+                </Entry>
+                <Entry Grid.Row="2" x:Name="PasswordEntry" BackgroundColor="White" Text="{Binding Password,Mode=TwoWay}" IsPassword="True" Placeholder="Password" PlaceholderColor="Black"   WidthRequest="330" HorizontalOptions="Center" Margin="0,0,0,0" />
+                <Label Grid.Row="4" x:Name="ErrorMessage" Text="{Binding ErrorMsg,Mode=TwoWay}" IsVisible="{Binding Error,Mode=TwoWay}" TextColor="Red" HorizontalOptions="Center"></Label>
+                <Button Text="LOGIN" Grid.Row="7" Clicked="Login_Button"  BackgroundColor="{StaticResource bluebtn}" FontSize="Medium" CornerRadius="20" HeightRequest="40" WidthRequest="180" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" ></Button>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="13">
+                    <Label Text="Forgotten password?" Margin="0,0,10,0" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ForGot_Tapped"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="New Here? SIGN UP" Margin="10,0,0,0" HorizontalOptions="EndAndExpand" VerticalOptions="Center" TextColor="Black">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Signup_Button"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Grid>
+        </Grid>
+        <ActivityIndicator IsVisible="{Binding IsBusy,Mode=TwoWay}" IsRunning="{Binding IsBusy,Mode=TwoWay}"  HorizontalOptions="Center" VerticalOptions="Center"  AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"></ActivityIndicator>
+    </AbsoluteLayout>
+</ContentPage>

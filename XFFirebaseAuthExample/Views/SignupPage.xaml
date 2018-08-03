@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TouristEye.Views.SignupPage">
+    <AbsoluteLayout>
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="header.jpg" Margin="0,0,0,10" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
+            <Grid Grid.Row="1" Padding="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Entry Grid.Row="0" Placeholder="Name" x:Name="NameEntry" Text="{Binding userProfile.Name,Mode=TwoWay}" PlaceholderColor="Black" BackgroundColor="White" WidthRequest="330" HorizontalOptions="Center">
+                </Entry>
+                <Entry Grid.Row="1" BackgroundColor="White" Text="{Binding userProfile.Phone,Mode=TwoWay}" x:Name="TeleEntry" Keyboard="Telephone" Placeholder="Cell Phone" PlaceholderColor="Black"  WidthRequest="330" HorizontalOptions="Center" Margin="0,0,0,0" />
+                <Entry Grid.Row="2" BackgroundColor="White" Text="{Binding Email,Mode=TwoWay}" x:Name="EmailEntry" Keyboard="Email" Placeholder="Email address" PlaceholderColor="Black" WidthRequest="330" HorizontalOptions="Center" Margin="0,0,0,0" />
+                <Entry Grid.Row="3" BackgroundColor="White" x:Name="PasswordEntry" Text="{Binding Password,Mode=TwoWay}" Placeholder="Password" PlaceholderColor="Black" IsPassword="True" WidthRequest="330" HorizontalOptions="Center" Margin="0,0,0,0" />
+                <Entry Grid.Row="4" BackgroundColor="White" x:Name="RepaswordEntry"  Placeholder="Re-Password" PlaceholderColor="Black" IsPassword="True" WidthRequest="330" HorizontalOptions="Center" Margin="0,0,0,0" />
+                <Entry Grid.Row="5" BackgroundColor="White" Text="{Binding userProfile.Address,Mode=TwoWay}" x:Name="ResidensHospitalEntry" Placeholder="Address" PlaceholderColor="Black" WidthRequest="330" HorizontalOptions="Center" Margin="0,0,0,0" />
+                <Label Grid.Row="6" x:Name="ErrorMessage" Text="{Binding ErrorMsg,Mode=TwoWay}" IsVisible="{Binding Error,Mode=TwoWay}" TextColor="Red" HorizontalOptions="Center"></Label>
+                <Button Text="SIGN UP" Clicked="SubmitClicked" Grid.Row="8" BackgroundColor="{StaticResource bluebtn}" FontSize="Medium" CornerRadius="20" HeightRequest="40" WidthRequest="180" HorizontalOptions="Center" TextColor="White" ></Button>
+            </Grid>
+        </Grid>
+        <ActivityIndicator IsVisible="{Binding IsBusy,Mode=TwoWay}" IsRunning="{Binding IsBusy,Mode=TwoWay}"  HorizontalOptions="Center" VerticalOptions="Center"  AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"></ActivityIndicator>
+    </AbsoluteLayout>
+</ContentPage>

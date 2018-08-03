@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "884453501003",
+    "firebase_url": "https://touristeye-tech.firebaseio.com",
+    "project_id": "touristeye-tech",
+    "storage_bucket": "touristeye-tech.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884453501003:android:7a9dc07db84f522c",
+        "android_client_info": {
+          "package_name": "com.pumoritechllc.TouristEye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884453501003-514tjs1spf8sdotmdjbf4a4dquotlji4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4PJr3dxjQFshEJO9-JdN9CDeFAduD6VA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

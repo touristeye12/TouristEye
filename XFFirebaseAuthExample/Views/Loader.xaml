@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TouristEye.Views.Loader"
+             xmlns:SF="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms">
+    <ContentPage.Content>
+        <StackLayout>
+            <SF:SfBusyIndicator 
+                Duration="0.5"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                ViewBoxHeight="150"
+                ViewBoxWidth="150"
+                TextColor="{StaticResource Accent}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
